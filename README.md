@@ -61,7 +61,7 @@ You can use these tools to verify the accessibility level of your web or app, fe
 * [Web accessibility checkers and tools recommended by W3C][w3c-web-tools]
 * [AccessLint for web projects on GitHub][accesslint]
 * [Accessibility on Android by Google][android-accessibility]
-* [Blog about how to test accessibility on Android[[android-accessibility-testing]
+* [Blog about how to test accessibility on Android][android-accessibility-testing]
 * [Accessibility for developers by Apple][apple-accessibility]
 * [Accessibility testing on iOS][ios-accessibility-testing]
 * [Blog with mobile accessibility tools][mobile-tools]
@@ -79,7 +79,7 @@ Create a new pull request with your sugested changes explaining the reasons and 
 [w3c-web-tools]: https://www.w3.org/WAI/ER/tools/
 [accesslint]: https://accesslint.com/
 [android-accessibility]: https://developer.android.com/guide/topics/ui/accessibility/testing
-[android-accessibility testing]: https://thoughtbot.com/blog/accessibility-testing-on-android
+[android-accessibility-testing]: https://thoughtbot.com/blog/accessibility-testing-on-android
 [apple-accessibility]: https://developer.apple.com/accessibility/
 [ios-accessibility-testing]: https://developer.apple.com/library/archive/technotes/TestingAccessibilityOfiOSApps/TestingtheAccessibilityofiOSApps/TestingtheAccessibilityofiOSApps.html
 [mobile-tools]: https://www.digitala11y.com/free-mobile-accessibility-testing-tools/
