@@ -11,37 +11,37 @@ Accessibility & Usability Experience Indicators is a tags methodology to make ea
 During the mockups or prototype design the UXs can use this indicators to determine the natural behavior that the feature must have. The indicators contains some main categories to rate this features and notify development team how they must implement the functionality to keep safe accesible behavior. The developers can determine what actions they must take to comply with the accessible behaviors assigned by the UXs calculating with a binary template what's the expected behavior with details for each component or feature
 
 ## AUX Indicators tags
-### HF
+### HF - Haptic Feedback
 If the component requires an haptic feedback when the user interact with it. Aditionaly you can determine an specific pattern with . (point) and - (dash) symbols where point represents a short feedback (1 second) and dash a long one (3 seconds). Examples:  
 HF- determine an haptic feedback with long length, HF.. indicate an haptic pattern of two short consecutive feedbacks.  
 *NOTE: HF without points or dashes it's equivalent to an haptic feedback with one short length*
 
-### SF
+### SF - Sound Feedback
 Indicate that the control will have a sound feedback when the user interact with the component, the sounds must be given by the UX's. Don't use sounds that are more than 3 seconds length or it could affect the experience of some users, this does'nt apply to ambient sounds or musical orchestras for games or to sounds used for alarms, ringtones or similar. Examples:  
 SF(https://example.com/send_message_sound.mp3
 
-### T
+### T - Time Duration
 Determines the duration of any popup message, if you add a P indicates a persistent popup, otherwise use a number in seconds, also you can use S (short), M (medium) or L (long) to determine a default value offered by the platforms like Toast.SHORT_LENGTH, in Android. Examples:  
 TP if the popup must be persistent, T5 to show during 5 seconds, TM to use the platform default lengths  
 *NOTE: If the popup contains an action button that involves modifying any data that might affect UI flow like "Undo", "Don't remind me again" or "Retry", it should preferably be persistent and have auto focus. This doesn't apply to buttons that represent discard actions for the popup message such as a simple "Ok" or "Accept" button as long as the message doesn't represent an authorization or sign of the user with a legal means, contract or confirmation of changes or transactions*
 
-### AF
+### AF - Autofocus
 If the component requires an auto focus when is showed, only use this in a one component by layout and remenber that a popup it's an individual layout. Useful with forms to enforce the user cursor in a component. Examples:  
 In a form with 6 different imputs use AF in the first one, if a popup message is showed when the user press "Next" AF in the popup make the cursor jump to it. If the user have an incorrect input AF jump to the component with problems, if more than one component have problems AF  enforce first one
 
-### SC
+### SC - Shortcut
 Determine a shortcut to active or interact with a component, Use +[shortcut] to indicate the gesture or keystrokes of the shortcut. Examples:  
 SC+ALT+K indicate Alt + K key, SC+swipe+up indicates a swipe gesture over the capacitive screen  
 *NOTE: the keyboard shortcuts could be supported by smartphones or tablets but depend if the user have this periferics connected or enabled in the device, notify the user for these shortcuts and how to interact with them, also provide a persistant link or button to the user to view the full list of the available shortcuts in the current layout*  
 **WARNING: before determine a shortcut please verify if the shortcut don't  make interferences with the most popular assistive softwares like [Freedom Scientific products][freedomscientific], [NVDA software][nvda], Talkback [gestures][tb-gestures] and [keyboard shortcuts][tb-keyboard] for Android or VoiceOver [gestures][vo-gestures] and [keyboard shortcuts][vo-keyboard] for Apple**
 
-### ALT & DC
+### ALT & DC - Alternative Text and Decorative Content
 Use these tags to indicate the alternative text for images or pictures if it's required, also you can indicate if the resource it's only a decorative image. The image description must be the most short and clear possible and only it's required when the image it's the only way to show information or data to the user and if these info are important for the content understanding, otherwise the image can be tagged as decorative. Don't use descriptions without context or non-descriptive texts like "Image with instructions", "Errors list" or "User picture", the first and second should describve the content clearly like "Press next to continue" or "This field only contains numbers between 0 and 9" and the last one it's not necessary so must be declared as decorative. Avoid using expressions like "Image contains", "Image with" or "Image is" for the beginning of descriptions, it doesn't provide valuable information to the user and may affect the flow for some users. Example:  
 A logo with DC tag indicates that it's a decorative image, an image with ALT"Image description" determines the alternative text for the resource  
 *NOTE: Emogys, stickers or expresive images couldn't consider as decorative because it should provides contextual information for the user and it's recommended to add alternative text and an accessible way to use and insert it for the apps with edit fields with these features*  
 **WARNING: all decorative images must be skiped for assistive softwares, specialy for screen readers because their could affect the user experience, please go to the documentation for each platform to determine the way to mark as NOT important for accessibility**
 
-### FI & FG
+### FI & FG - Focus Independent and Focus Group
 Determine if the component with childs must allows independent focus for each child or must be consider as one component, useful for mobile layouts where card views can be managed as unique component or not. It's not necessary to tag all the childs, you can use "(FI)" and (/FI)" to determine the begining and the finish of the component and you can nestle other tags inside the component. Example:  
 If you have a card view with a character description with the picture, name, kind, and a list of attributes you can put (FI) at the begining of the component and (/FI) at the end to indicate that all the childs must be focusable, and add DC tag to the picture to make it a decorative.  
 If you want to make the attributes list focusable as a group you can put (FI) at the begining of the component, (FI) at the end, DC over the picture and (FG) at the begining of the attributes child and (/FG) at the end  
